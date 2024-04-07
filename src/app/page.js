@@ -1,95 +1,117 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Content } from "next/font/google";
+import { Button, Input } from "antd";
+import { SearchOutlined } from '@ant-design/icons';
+import { useContext, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { DataContext, UpdaterContext } from "./AuthContext";
+
 
 export default function Home() {
+  const libraries = ['places'];
+  const [place,setPlace] = useState("")
+  const router = useRouter()
+  const update = useContext(UpdaterContext)
+  const data = useContext(DataContext)
+  // const { isLoaded, loadError } = useLoadScript({
+  //   googleMapsApiKey: "AIzaSyBGBVmYYo05JfeGAjG9gWf3mCWqAOyHijg",
+  //   libraries,
+  // });
+
+  const placesRef = useRef()
+  
+ 
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
+        <div className={styles.container}>
+             <nav className={styles.header}>
+             <Image
+              className={styles.logo}
+              src="/logo.svg"
+              alt="SyntaxSoftwareInnovations Logo"
+              width={180}
+              height={37}
               priority
             />
-          </a>
+
+            <div className={styles.right}>
+              <div className={styles.welcome}>Welcome!</div>
+              <Image
+                className={styles.user}
+                src="/user.svg"
+                alt="current user image"
+                width={180}
+                height={37}
+                priority
+              />
+            </div>
+             </nav>
         </div>
-      </div>
+        <div className={styles.content}>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <div className={styles.contentLeft}>
+            <div className={styles.textContainer}>
+            <div className={styles.love}>
+                   Find a place you will love to live!
+                </div>
+                <div className={styles.through}>
+                  See through the lenses of people who have
+                  lived or visited the neighbourhood you might
+                  have in mind.
+                </div>
+            </div>
+                  {/* <LoadScript
+                  googleMapsApiKey= "AIzaSyBGBVmYYo05JfeGAjG9gWf3mCWqAOyHijg"
+                 libraries ={["places"]}
+                 
+                 > */}
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+                        
+                            <Input placeholder="Enter Address" ref={placesRef} onChange={(e)=>{
+                              setPlace(e.target.value)
+                              localStorage.setItem("location", e.target.value);
+                            }} prefix={<SearchOutlined />} className={styles.searchInput} />
+                            
+                           
+                       {/* </LoadScript> */}
+                       
+            
+            <Button className={styles.search} type="primary" onClick={()=>{
+             
+             if(place != null || place != ""){
+                router.push('/reviews')
+              
+              }
+              }
+            }>SEARCH</Button>
+          </div>
+         
+         
+          
+          <div className={styles.frames}>
+          <Image
+              className={styles.frame1}
+              src="/Frame1.svg"
+              alt="frames"
+              width={239}
+              height={800}
+              priority
+            />
+            <Image
+              className={styles.frame2}
+              src="/Frame2.svg"
+              alt="frames"
+              width={239}
+              height={800}
+              priority
+            />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <div className={styles.overlay}></div>
+          </div>
+        </div>
+     
     </main>
   );
 }
