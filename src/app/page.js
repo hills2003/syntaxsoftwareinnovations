@@ -7,10 +7,15 @@ import { SearchOutlined } from '@ant-design/icons';
 import { useContext, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { DataContext, UpdaterContext } from "./AuthContext";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "./firebaseConfig";
+import { useDispatch } from "react-redux";
+import { updater } from "./features/counterSlice";
 
 
 export default function Home() {
   const libraries = ['places'];
+  const dispatch = useDispatch()
   const [place,setPlace] = useState("")
   const router = useRouter()
   const update = useContext(UpdaterContext)
@@ -69,12 +74,9 @@ export default function Home() {
                  > */}
 
                         
-                            <Input placeholder="Enter Address" ref={placesRef} onChange={(e)=>{
+                            <Input placeholder="Enter Address" ref={placesRef} onChange={async(e)=>{
                               setPlace(e.target.value)
-                              if (typeof window !== 'undefined') {
-                                localStorage.setItem("location", e.target.value);
-
-                              }
+                              dispatch(updater(e.target.value))
                               
                             }} prefix={<SearchOutlined />} className={styles.searchInput} />
                             
@@ -82,10 +84,12 @@ export default function Home() {
                        {/* </LoadScript> */}
                        
             
-            <Button className={styles.search} type="primary" onClick={()=>{
+            <Button className={styles.search} type="primary" onClick={async()=>{
              
              if(place != null || place != ""){
-                router.push('/reviews')
+
+              router.push('/reviews')
+              
               
               }
               }

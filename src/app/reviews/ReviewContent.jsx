@@ -7,16 +7,13 @@ import { Button, Input, Tooltip } from 'antd';
 import { Alert, Space } from 'antd';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
+import { useSelector } from 'react-redux';
 
 function ReviewContent({success,error}) {
   const [show,setShow] = useState(true)
   const [data,setData] = useState([])
-  let location= null
-  if (typeof window !== 'undefined') {
-    location = localStorage.getItem("location").toLowerCase();
+  const location = useSelector((state) => state.counter.location)
 
-
-  }
   useEffect(()=>{
    const unsub = onSnapshot(doc(db, "reviews", location), (doc) => {
       console.log("Current data: ", doc.data().reviews);

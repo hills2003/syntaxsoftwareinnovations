@@ -14,6 +14,8 @@ import { doc, getDoc, onSnapshot, setDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 export const Backdrop = React.createContext("")
 export const BackdropUpdater = React.createContext(false)
@@ -201,12 +203,9 @@ function page() {
     setSuccess(false)
     setError(false)
   }
-  let location= null
-  if (typeof window !== 'undefined') {
-    location = localStorage.getItem("location").toLowerCase();
+  const location = useSelector((state) => state.counter.location)
+  
 
-
-  }
   useEffect(()=>{
     const unsub = onSnapshot(doc(db, "reviews", location), (doc) => {
        console.log("Current data: ", doc.data().reviews);

@@ -5,17 +5,13 @@ import { Button, Input, Tooltip } from 'antd';
 import { InfoCircleOutlined, UserOutlined,RightOutlined } from '@ant-design/icons';
 import { Backdrop, BackdropUpdater } from './page';
 import { DataContext } from '../AuthContext';
+import { useSelector } from 'react-redux';
 
 function Reviews({noOfReviews}) {
 
   const data = useContext(Backdrop)
   const updater = useContext(BackdropUpdater)
-  let location= null
-  if (typeof window !== 'undefined') {
-    location = localStorage.getItem("location").toLowerCase();
-
-
-  }
+  const location = useSelector((state) => state.counter.location)
 
   const handleModal = () =>{
      updater(!data)

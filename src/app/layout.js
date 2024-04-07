@@ -1,6 +1,10 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import AuthContext from "./AuthContext";
+import Wrapper from "./Wrapper";
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -10,10 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+   
     <AuthContext>
       <html lang="en">
+        <Wrapper>
         <body className={inter.className}>{children}</body>
+        </Wrapper>
       </html>
     </AuthContext>
+   
   );
 }
