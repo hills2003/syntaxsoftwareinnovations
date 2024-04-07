@@ -10,7 +10,12 @@ function Reviews({noOfReviews}) {
 
   const data = useContext(Backdrop)
   const updater = useContext(BackdropUpdater)
-  const location = localStorage.getItem("location");
+  let location= null
+  if (typeof window !== 'undefined') {
+    location = localStorage.getItem("location").toLowerCase();
+
+
+  }
 
   const handleModal = () =>{
      updater(!data)

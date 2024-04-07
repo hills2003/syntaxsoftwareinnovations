@@ -11,7 +11,12 @@ import { db } from '../firebaseConfig';
 function ReviewContent({success,error}) {
   const [show,setShow] = useState(true)
   const [data,setData] = useState([])
-  const location = localStorage.getItem("location").toLowerCase();
+  let location= null
+  if (typeof window !== 'undefined') {
+    location = localStorage.getItem("location").toLowerCase();
+
+
+  }
   useEffect(()=>{
    const unsub = onSnapshot(doc(db, "reviews", location), (doc) => {
       console.log("Current data: ", doc.data().reviews);

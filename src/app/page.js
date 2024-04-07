@@ -71,7 +71,11 @@ export default function Home() {
                         
                             <Input placeholder="Enter Address" ref={placesRef} onChange={(e)=>{
                               setPlace(e.target.value)
-                              localStorage.setItem("location", e.target.value);
+                              if (typeof window !== 'undefined') {
+                                localStorage.setItem("location", e.target.value);
+
+                              }
+                              
                             }} prefix={<SearchOutlined />} className={styles.searchInput} />
                             
                            

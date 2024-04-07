@@ -201,8 +201,12 @@ function page() {
     setSuccess(false)
     setError(false)
   }
+  let location= null
+  if (typeof window !== 'undefined') {
+    location = localStorage.getItem("location").toLowerCase();
 
-  const location = localStorage.getItem("location").toLowerCase();
+
+  }
   useEffect(()=>{
     const unsub = onSnapshot(doc(db, "reviews", location), (doc) => {
        console.log("Current data: ", doc.data().reviews);
@@ -215,14 +219,14 @@ function page() {
     setSuccess(false)
     setError(false)
     setSpinner(true)
-    const docRef = doc(db, "reviews", localStorage.getItem("location").toLowerCase());
+    const docRef = doc(db, "reviews", location);
     const docSnap = await getDoc(docRef);
     let name = anonymous == true ? "Anonymous" :"Hillary victor"
     try{
       if (docSnap.exists()) {
         console.log("Document data:", docSnap.data().reviews);
   
-        await setDoc(doc(db, "reviews", localStorage.getItem("location").toLowerCase()), {
+        await setDoc(doc(db, "reviews", location), {
           reviews:[{
            amenities:[...all],
            text:reviewText,
@@ -236,7 +240,7 @@ function page() {
       } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
-        await setDoc(doc(db, "reviews", localStorage.getItem("location").toLowerCase()), {
+        await setDoc(doc(db, "reviews", location), {
           reviews:[{
            amenities:[...all],
            text:reviewText,
