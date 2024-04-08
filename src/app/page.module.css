@@ -18,7 +18,7 @@
 .container{
   width: 1240px;
   height: 50px;
-  opacity: 0px;
+  
   background-color: rgb(250,252,253);
   z-index:1000;
   display:flex;
@@ -31,7 +31,7 @@
   height: 50px;
   z-index:1000;
   gap: 28px;
-  opacity: 0px;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,14 +46,14 @@
   padding: 8px 0px 8px 0px;
   gap: 4px;
   border-radius: 4px;
-  opacity: 0px;
+  
 
 }
 .right{
   width: 125px;
   height: 36px;
   gap: 13px;
-  opacity: 0px;
+  
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@
   width: 36px;
   height: 36px;
   gap: 0px;
-  opacity: 0px;
+  
   border-radius: 50%;
 
 }
@@ -81,7 +81,7 @@
   width: 702px;
   height: 441px;
   gap: 40px;
-  opacity: 0px;
+  
   
 }
 .rightContent{
@@ -108,7 +108,7 @@
   top: -57px;
   left: 2px;
   gap: 24px;
-  opacity: 0px;
+  
 
 }
 
@@ -118,7 +118,7 @@
   top: -57px;
   left: 2px;
   gap: 24px;
-  opacity: 0px;
+  
 
 }
 
@@ -166,7 +166,7 @@
   width: 507px;
   height: 281px;
   gap: 40px;
-  opacity: 0px;
+  
 
 }
 .through{
@@ -184,7 +184,7 @@
   gap: 10px;
   border-radius: 6px;
   border: 1px;
-  opacity: 0px;
+  
 
 }
 
@@ -194,7 +194,7 @@
   padding: 16px 40px 16px 40px;
   gap: 10px;
   border-radius: 6px;
-  opacity: 0px;
+  
   background-color: #3366FF;
 
 
@@ -218,7 +218,7 @@
   padding: 24px 24px 18px 24px;
   gap: 0px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
+  
   background-color:rgba(250, 252, 253, 1);
   display:flex;
   justify-content: center;
@@ -233,7 +233,7 @@
     height: 50px;
     z-index:1000;
     gap: 28px;
-    opacity: 0px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -289,7 +289,7 @@
   width: 607px;
   height: 281px;
   gap: 40px;
-  opacity: 0px;
+  
 
 }
 
@@ -303,7 +303,7 @@
     width: 500px;
     height: 281px;
     gap: 40px;
-    opacity: 0px;
+    
   
   }
 
@@ -351,7 +351,7 @@
     align-items: center;
     width: 90vw;
     height:0;
-    opacity: 0px;
+    
     gap:0
   
   }
@@ -379,7 +379,7 @@
     gap: 0;
     border-radius: 6px;
     border: 1px;
-    opacity: 0px;
+    
     margin-top:20em;
   
   }
@@ -401,7 +401,7 @@
     padding: 16px 40px 16px 40px;
     gap: 0;
     border-radius: 6px;
-    opacity: 0px;
+    
     background-color: #3366FF;
     margin-top: 1em;
   
@@ -411,7 +411,7 @@
   .container{
     width: 100vw;
     height: 50px;
-    opacity: 0px;
+    
     background-color: rgb(250,252,253);
     z-index:1000;
     display:flex;
@@ -426,7 +426,7 @@
     height: 50px;
     z-index:1000;
     gap: 0;
-    opacity: 0px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -442,7 +442,7 @@
     padding: 8px 0px 8px 0px;
     gap: 0;
     border-radius: 4px;
-    opacity: 0px;
+    
   
   }
 
@@ -450,7 +450,7 @@
     width: 125px;
     height: 36px;
     gap: 0;
-    opacity: 0px;
+    
     display:flex;
     justify-content: space-between;
     align-items: center;
