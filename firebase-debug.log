@@ -244,3 +244,72 @@ Failed to fetch `Inter` from Google Fonts.
     at async deploy (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\deploy\index.js:55:13)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2024-04-08T09:26:08.703Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T09:26:08.986Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-08T09:26:08.987Z] CLI Version:   13.7.1
+[debug] [2024-04-08T09:26:08.987Z] Platform:      win32
+[debug] [2024-04-08T09:26:08.987Z] Node Version:  v21.7.1
+[debug] [2024-04-08T09:26:08.988Z] Time:          Mon Apr 08 2024 10:26:08 GMT+0100 (West Africa Standard Time)
+[debug] [2024-04-08T09:26:08.988Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-08T09:26:09.454Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-08T09:26:09.455Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
+[debug] [2024-04-08T09:26:09.456Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-08T09:26:09.464Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
+[debug] [2024-04-08T09:26:09.465Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
+[debug] [2024-04-08T09:26:09.465Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T09:26:10.603Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
+[debug] [2024-04-08T09:26:10.604Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T09:26:10.606Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T09:26:11.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T09:26:11.312Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-04-08T09:26:54.165Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T09:26:55.585Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T09:26:55.586Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 14.1.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info] (node:11232) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+[info] Compiler server unexpectedly exited with code: null and signal: SIGTERM
+
+[info] Compiler edge-server unexpectedly exited with code: null and signal: SIGTERM
+
+[info] (node:368) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+[info] uncaughtException Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:512:26)
+    at Timeout._onTimeout (C:\Hillary\thco\node_modules\next\dist\compiled\jest-worker\index.js:1:12931)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'kill'
+}
+
+[debug] [2024-04-08T09:29:26.566Z] SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at findDependency (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
+    at getNextVersion (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\utils.js:196:51)
+    at getConfig (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\index.js:436:52)
+    at async build (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\index.js:76:59)
+    at async prepareFrameworks (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\index.js:224:33)
+    at async deploy (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\deploy\index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
