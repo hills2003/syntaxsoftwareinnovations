@@ -255,9 +255,11 @@ function page() {
       setSuccess(true)
     }catch(err){
       setError(true)
+      setModal(false)
     }
 
     setTimeout(retrace,5000)
+    setModal(false)
 
     
 
@@ -282,7 +284,7 @@ function page() {
           <div className={styles.card}>
             <div className={styles.title}>Review Location</div>
             <div className={styles.amenities}>
-              <div className={styles.location}>Bonny and Clyde Street, Ajao Estate, Lagos</div>
+              <div className={styles.location}>{location}</div>
               {/* <Collapse className={styles.collapse} ghost items={items} /> */}
               <div className={styles.dropContainer}>
                   <div className={styles.dropTop} onClick={handleClose}>

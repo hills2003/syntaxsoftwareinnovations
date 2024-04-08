@@ -11,6 +11,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "./firebaseConfig";
 import { useDispatch } from "react-redux";
 import { updater } from "./features/counterSlice";
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 
 export default function Home() {
@@ -74,18 +75,31 @@ export default function Home() {
                  > */}
 
                         
-                            <Input placeholder="Enter an Address" ref={placesRef} onChange={async(e)=>{
+                            {/* <Input placeholder="Enter an Address" ref={placesRef} onChange={async(e)=>{
                               setPlace(e.target.value)
-                              dispatch(updater(e.target.value))
                               
-                            }} prefix={<SearchOutlined />} className={styles.searchInput} />
+                              
+                            }} prefix={<SearchOutlined />} className={styles.searchInput} /> */}
+
+                              
+                              <div style={{width:'50%',height:'10px'}}>
+                              <GooglePlacesAutocomplete
+                                apiKey="AIzaSyBGBVmYYo05JfeGAjG9gWf3mCWqAOyHijg"
+                                selectProps={{
+                                  place,
+                                  onChange:setPlace
+                                }}
+                                
+                              />
+                                </div>
                             
                            
                        {/* </LoadScript> */}
                        
             
             <Button disabled={place == "" ? true : false} className={styles.search} type="primary" onClick={async()=>{
-              router.push('/reviews')
+              dispatch(updater(place.label))
+             router.push('/reviews')
               }
             }>SEARCH</Button>
           </div>

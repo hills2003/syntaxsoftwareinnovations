@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from "./reviews.module.css";
 import Image from 'next/image';
 import { Button, Input, Tooltip } from 'antd';
@@ -6,15 +6,25 @@ import { InfoCircleOutlined, UserOutlined,RightOutlined } from '@ant-design/icon
 import { Backdrop, BackdropUpdater } from './page';
 import { DataContext } from '../AuthContext';
 import { useSelector } from 'react-redux';
-
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import { useDispatch } from "react-redux";
+import { updater } from "../features/counterSlice";
 function Reviews({noOfReviews}) {
 
   const data = useContext(Backdrop)
-  const updater = useContext(BackdropUpdater)
+  const update = useContext(BackdropUpdater)
   const location = useSelector((state) => state.counter.location)
+  const dispatch = useDispatch()
 
   const handleModal = () =>{
-     updater(!data)
+     update(!data)
+  }
+
+  const [place,setPlace] = useState('')
+
+  const updateState = (d) =>{
+       console.log(d)
+       dispatch(updater(d.label))
   }
 
   return (
@@ -31,26 +41,14 @@ function Reviews({noOfReviews}) {
                     />
 
                     <div className={styles.inputContainer}>
-                    <Input
-                    className={styles.input}
-                        placeholder="Enter your username"
-                        prefix={
-                            <UserOutlined
-                            style={{
-                                color: 'rgba(0,0,0,.25)',
-                            }}
-                            />
-                        }
-                        suffix={
-                            <Tooltip title="clear?">
-                            <InfoCircleOutlined
-                                style={{
-                                color: 'rgba(0,0,0,.45)',
+                    <GooglePlacesAutocomplete
+                                apiKey="AIzaSyBGBVmYYo05JfeGAjG9gWf3mCWqAOyHijg"
+                                selectProps={{
+                                  place,
+                                  onChange:updateState
                                 }}
-                            />
-                            </Tooltip>
-                        }
-                        />
+                                
+                              />
                     </div>
             </div>
 

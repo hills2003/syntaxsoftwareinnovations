@@ -19,7 +19,7 @@ function ReviewContent({success,error}) {
       console.log("Current data: ", doc.data().reviews);
       setData(doc.data().reviews)
   });
-  },[])
+  },[location])
 
   return (
     <div className={styles.reviews}>
@@ -40,7 +40,7 @@ function ReviewContent({success,error}) {
                         priority
                         />
                         <div className={styles.reviewerName}>{data.name}.</div>
-                        <div className={styles.date}>5 months ago</div>
+                        <div className={styles.date}>just now</div>
                    </div>
 
                     <div className={styles.rateField}>
