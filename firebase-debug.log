@@ -1,31 +1,31 @@
-[debug] [2024-04-08T08:00:34.952Z] ----------------------------------------------------------------------
-[debug] [2024-04-08T08:00:34.958Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-04-08T08:00:34.959Z] CLI Version:   13.7.1
-[debug] [2024-04-08T08:00:34.960Z] Platform:      win32
-[debug] [2024-04-08T08:00:34.961Z] Node Version:  v21.7.1
-[debug] [2024-04-08T08:00:34.962Z] Time:          Mon Apr 08 2024 09:00:34 GMT+0100 (West Africa Standard Time)
-[debug] [2024-04-08T08:00:34.962Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T14:25:08.751Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T14:25:08.759Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-08T14:25:08.760Z] CLI Version:   13.7.1
+[debug] [2024-04-08T14:25:08.761Z] Platform:      win32
+[debug] [2024-04-08T14:25:08.761Z] Node Version:  v21.7.1
+[debug] [2024-04-08T14:25:08.762Z] Time:          Mon Apr 08 2024 15:25:08 GMT+0100 (West Africa Standard Time)
+[debug] [2024-04-08T14:25:08.763Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-04-08T08:00:35.177Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-08T08:00:35.180Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
-[debug] [2024-04-08T08:00:35.180Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-08T08:00:35.191Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
-[debug] [2024-04-08T08:00:35.191Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
-[debug] [2024-04-08T08:00:35.191Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:00:36.570Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
-[debug] [2024-04-08T08:00:36.570Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:00:36.572Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:00:37.434Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:00:37.434Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
-[debug] [2024-04-08T08:00:47.096Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites pageToken=&pageSize=10
-[debug] [2024-04-08T08:00:48.513Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
-[debug] [2024-04-08T08:00:48.514Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2024-04-08T08:00:48.515Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 
-[debug] [2024-04-08T08:00:48.942Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
-[debug] [2024-04-08T08:00:48.942Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2024-04-08T08:00:48.943Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config [none]
-[debug] [2024-04-08T08:00:50.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config 200
-[debug] [2024-04-08T08:00:50.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config {"projectId":"syntaxsoftwareinnovation","appId":"1:771305716540:web:04b7cd620aa52abebabc39","storageBucket":"syntaxsoftwareinnovation.appspot.com","apiKey":"AIzaSyAt54gRdTxPZ2QQw0TnQ02PB-EZ0K-LFMU","authDomain":"syntaxsoftwareinnovation.firebaseapp.com","messagingSenderId":"771305716540"}
+[debug] [2024-04-08T14:25:09.022Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-08T14:25:09.024Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
+[debug] [2024-04-08T14:25:09.025Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-08T14:25:09.032Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
+[debug] [2024-04-08T14:25:09.033Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
+[debug] [2024-04-08T14:25:09.033Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T14:25:10.433Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
+[debug] [2024-04-08T14:25:10.434Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T14:25:10.437Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T14:25:11.061Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T14:25:11.062Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
+[debug] [2024-04-08T14:25:26.996Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites pageToken=&pageSize=10
+[debug] [2024-04-08T14:25:28.760Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
+[debug] [2024-04-08T14:25:28.761Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-08T14:25:28.762Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 
+[debug] [2024-04-08T14:25:29.190Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
+[debug] [2024-04-08T14:25:29.190Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-08T14:25:29.191Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config [none]
+[debug] [2024-04-08T14:25:30.165Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config 200
+[debug] [2024-04-08T14:25:30.165Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config {"projectId":"syntaxsoftwareinnovation","appId":"1:771305716540:web:04b7cd620aa52abebabc39","storageBucket":"syntaxsoftwareinnovation.appspot.com","apiKey":"AIzaSyAt54gRdTxPZ2QQw0TnQ02PB-EZ0K-LFMU","authDomain":"syntaxsoftwareinnovation.firebaseapp.com","messagingSenderId":"771305716540"}
 [info] 
    Thank you for trying our early preview of Next.js support on Firebase Hosting.
    During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
@@ -37,140 +37,62 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
-[debug] [2024-04-08T08:01:10.495Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:01:11.728Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:01:11.728Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
-[info]    ▲ Next.js 14.1.4
-
-[info] 
-
-[debug] [2024-04-08T08:09:56.765Z] ----------------------------------------------------------------------
-[debug] [2024-04-08T08:09:56.776Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-04-08T08:09:56.778Z] CLI Version:   13.7.1
-[debug] [2024-04-08T08:09:56.779Z] Platform:      win32
-[debug] [2024-04-08T08:09:56.779Z] Node Version:  v21.7.1
-[debug] [2024-04-08T08:09:56.780Z] Time:          Mon Apr 08 2024 09:09:56 GMT+0100 (West Africa Standard Time)
-[debug] [2024-04-08T08:09:56.781Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-08T08:09:57.025Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-08T08:09:57.026Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
-[debug] [2024-04-08T08:09:57.026Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-08T08:09:57.030Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
-[debug] [2024-04-08T08:09:57.031Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
-[debug] [2024-04-08T08:09:57.031Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:09:58.930Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
-[debug] [2024-04-08T08:09:58.931Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:09:58.932Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:10:00.089Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:10:00.089Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
-[debug] [2024-04-08T08:10:28.462Z] SyntaxError: Unexpected end of JSON input
-    at JSON.parse (<anonymous>)
-    at findDependency (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
-    at getNextVersion (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\utils.js:196:51)
-    at discover (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\index.js:41:48)
-    at async discover (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\index.js:47:32)
-    at async prepareFrameworks (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\index.js:192:25)
-    at async deploy (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\deploy\index.js:55:13)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-08T08:10:41.845Z] ----------------------------------------------------------------------
-[debug] [2024-04-08T08:10:41.849Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-04-08T08:10:41.850Z] CLI Version:   13.7.1
-[debug] [2024-04-08T08:10:41.850Z] Platform:      win32
-[debug] [2024-04-08T08:10:41.851Z] Node Version:  v21.7.1
-[debug] [2024-04-08T08:10:41.851Z] Time:          Mon Apr 08 2024 09:10:41 GMT+0100 (West Africa Standard Time)
-[debug] [2024-04-08T08:10:41.852Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-08T08:10:42.021Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-08T08:10:42.022Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
-[debug] [2024-04-08T08:10:42.022Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-08T08:10:42.028Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
-[debug] [2024-04-08T08:10:42.029Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
-[debug] [2024-04-08T08:10:42.029Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:10:43.572Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
-[debug] [2024-04-08T08:10:43.574Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:10:43.576Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:10:44.183Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:10:44.183Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
-[debug] [2024-04-08T08:10:56.313Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites pageToken=&pageSize=10
-[debug] [2024-04-08T08:10:58.232Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
-[debug] [2024-04-08T08:10:58.233Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2024-04-08T08:10:58.235Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 
-[debug] [2024-04-08T08:10:58.770Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
-[debug] [2024-04-08T08:10:58.770Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2024-04-08T08:10:58.773Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config [none]
-[debug] [2024-04-08T08:10:59.816Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config 200
-[debug] [2024-04-08T08:10:59.817Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config {"projectId":"syntaxsoftwareinnovation","appId":"1:771305716540:web:04b7cd620aa52abebabc39","storageBucket":"syntaxsoftwareinnovation.appspot.com","apiKey":"AIzaSyAt54gRdTxPZ2QQw0TnQ02PB-EZ0K-LFMU","authDomain":"syntaxsoftwareinnovation.firebaseapp.com","messagingSenderId":"771305716540"}
-[info] 
-   Thank you for trying our early preview of Next.js support on Firebase Hosting.
-   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
-   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
-
-   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
-   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
-   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
-
-   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
-
-[debug] [2024-04-08T08:11:16.034Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:11:17.536Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:11:17.537Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
+[debug] [2024-04-08T14:25:50.803Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T14:25:52.358Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T14:25:52.358Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
 [info]    ▲ Next.js 14.1.4
 
 [info] 
 
 [info]    Creating an optimized production build ...
-
-[info] (node:5464) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
 
 [info] Compiler server unexpectedly exited with code: null and signal: SIGTERM
 
-[info] Compiler edge-server unexpectedly exited with code: null and signal: SIGTERM
+[info] Compiler client unexpectedly exited with code: 3221225477 and signal: null
 
-[info] (node:6228) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
+[info] 
 
-[info] uncaughtException Error: kill EPERM
-    at ChildProcess.kill (node:internal/child_process:512:26)
-    at Timeout._onTimeout (C:\Hillary\thco\node_modules\next\dist\compiled\jest-worker\index.js:1:12931)
-    at listOnTimeout (node:internal/timers:573:17)
-    at process.processTimers (node:internal/timers:514:7) {
-  errno: -4048,
-  code: 'EPERM',
-  syscall: 'kill'
+[info] > Build error occurred
+
+[info] Error: Jest worker encountered 1 child process exceptions, exceeding retry limit
+    at ChildProcessWorker.initialize (C:\Hillary\ssi\ssi\node_modules\next\dist\compiled\jest-worker\index.js:1:11580)
+    at ChildProcessWorker._onExit (C:\Hillary\ssi\ssi\node_modules\next\dist\compiled\jest-worker\index.js:1:12545)
+    at ChildProcess.emit (node:events:531:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:294:12) {
+  type: 'WorkerError'
 }
 
-[debug] [2024-04-08T08:18:29.763Z] Error: Timed out.
-    at Timeout._onTimeout (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\utils.js:258:49)
-    at listOnTimeout (node:internal/timers:573:17)
-    at process.processTimers (node:internal/timers:514:7)
+[debug] [2024-04-08T14:26:39.686Z] Error: ENOENT: no such file or directory, open 'C:\Hillary\ssi\ssi\.next\export-marker.json'
 [error] 
 [error] Error: An unexpected error has occurred.
-[debug] [2024-04-08T08:48:50.307Z] ----------------------------------------------------------------------
-[debug] [2024-04-08T08:48:50.474Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-04-08T08:48:50.476Z] CLI Version:   13.7.1
-[debug] [2024-04-08T08:48:50.476Z] Platform:      win32
-[debug] [2024-04-08T08:48:50.477Z] Node Version:  v21.7.1
-[debug] [2024-04-08T08:48:50.478Z] Time:          Mon Apr 08 2024 09:48:50 GMT+0100 (West Africa Standard Time)
-[debug] [2024-04-08T08:48:50.479Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T14:27:51.032Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T14:27:51.038Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-08T14:27:51.039Z] CLI Version:   13.7.1
+[debug] [2024-04-08T14:27:51.040Z] Platform:      win32
+[debug] [2024-04-08T14:27:51.040Z] Node Version:  v21.7.1
+[debug] [2024-04-08T14:27:51.041Z] Time:          Mon Apr 08 2024 15:27:51 GMT+0100 (West Africa Standard Time)
+[debug] [2024-04-08T14:27:51.042Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-04-08T08:48:51.682Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-08T08:48:51.683Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
-[debug] [2024-04-08T08:48:51.684Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-08T08:48:51.722Z] > refreshing access token with scopes: []
-[debug] [2024-04-08T08:48:51.729Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-04-08T08:48:51.730Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-08T08:48:59.989Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2024-04-08T08:48:59.990Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-04-08T08:49:00.355Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
-[debug] [2024-04-08T08:49:00.355Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
-[debug] [2024-04-08T08:49:00.356Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:49:02.267Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
-[debug] [2024-04-08T08:49:02.267Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T08:49:02.269Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:49:03.264Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:49:03.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
+[debug] [2024-04-08T14:27:51.286Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-08T14:27:51.287Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
+[debug] [2024-04-08T14:27:51.288Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-08T14:27:51.294Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
+[debug] [2024-04-08T14:27:51.294Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
+[debug] [2024-04-08T14:27:51.295Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T14:27:52.732Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
+[debug] [2024-04-08T14:27:52.732Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-08T14:27:52.734Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T14:27:53.314Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T14:27:53.314Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
+[debug] [2024-04-08T14:28:07.374Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites pageToken=&pageSize=10
+[debug] [2024-04-08T14:28:09.116Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
+[debug] [2024-04-08T14:28:09.118Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-08T14:28:09.120Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 
+[debug] [2024-04-08T14:28:09.551Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites 200
+[debug] [2024-04-08T14:28:09.552Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites {"sites":[{"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-08T14:28:09.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config [none]
+[debug] [2024-04-08T14:28:10.455Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config 200
+[debug] [2024-04-08T14:28:10.456Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/webApps/-/config {"projectId":"syntaxsoftwareinnovation","appId":"1:771305716540:web:04b7cd620aa52abebabc39","storageBucket":"syntaxsoftwareinnovation.appspot.com","apiKey":"AIzaSyAt54gRdTxPZ2QQw0TnQ02PB-EZ0K-LFMU","authDomain":"syntaxsoftwareinnovation.firebaseapp.com","messagingSenderId":"771305716540"}
 [info] 
    Thank you for trying our early preview of Next.js support on Firebase Hosting.
    During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
@@ -182,128 +104,49 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
-[debug] [2024-04-08T08:49:46.645Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T08:49:48.012Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T08:49:48.012Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
+[debug] [2024-04-08T14:28:28.224Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
+[debug] [2024-04-08T14:28:30.021Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
+[debug] [2024-04-08T14:28:30.021Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
 [info]    ▲ Next.js 14.1.4
 
 [info] 
 
 [info]    Creating an optimized production build ...
-
-[info] (node:9380) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-
-[info] request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: getaddrinfo ENOTFOUND fonts.googleapis.com
-
-Retrying 1/3...
-
-[info] request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: getaddrinfo ENOTFOUND fonts.googleapis.com
-
-Retrying 2/3...
-
-[info] request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: getaddrinfo ENOTFOUND fonts.googleapis.com
-
-Retrying 3/3...
-
-[info] FetchError: request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: getaddrinfo ENOTFOUND fonts.googleapis.com
-    at ClientRequest.<anonymous> (C:\Hillary\thco\node_modules\next\dist\compiled\node-fetch\index.js:1:66160)
-    at ClientRequest.emit (node:events:519:28)
-    at TLSSocket.socketErrorListener (node:_http_client:500:9)
-    at TLSSocket.emit (node:events:519:28)
-    at emitErrorNT (node:internal/streams/destroy:169:8)
-    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-  type: 'system',
-  errno: 'ENOTFOUND',
-  code: 'ENOTFOUND'
-}
-
-[info] Failed to compile.
-
-
-[info] src\app\layout.js
-`next/font` error:
-Failed to fetch `Inter` from Google Fonts.
-
-
-[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Hillary\thco\.next\trace'] {
-  errno: -4048,
-  code: 'EPERM',
-  syscall: 'open',
-  path: 'C:\\Hillary\\thco\\.next\\trace'
-}
-
-[debug] [2024-04-08T08:53:09.054Z] SyntaxError: Unexpected end of JSON input
-    at JSON.parse (<anonymous>)
-    at findDependency (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
-    at getNextVersion (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\utils.js:196:51)
-    at getConfig (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\index.js:436:52)
-    at async build (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\index.js:76:59)
-    at async prepareFrameworks (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\index.js:224:33)
-    at async deploy (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\deploy\index.js:55:13)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2024-04-08T09:26:08.703Z] ----------------------------------------------------------------------
-[debug] [2024-04-08T09:26:08.986Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2024-04-08T09:26:08.987Z] CLI Version:   13.7.1
-[debug] [2024-04-08T09:26:08.987Z] Platform:      win32
-[debug] [2024-04-08T09:26:08.987Z] Node Version:  v21.7.1
-[debug] [2024-04-08T09:26:08.988Z] Time:          Mon Apr 08 2024 10:26:08 GMT+0100 (West Africa Standard Time)
-[debug] [2024-04-08T09:26:08.988Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2024-04-08T09:26:09.454Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-08T09:26:09.455Z] > authorizing via signed-in user (chillaryvictor@gmail.com)
-[debug] [2024-04-08T09:26:09.456Z] [iam] checking project syntaxsoftwareinnovation for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-04-08T09:26:09.464Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions [none]
-[debug] [2024-04-08T09:26:09.465Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions x-goog-quota-user=projects/syntaxsoftwareinnovation
-[debug] [2024-04-08T09:26:09.465Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T09:26:10.603Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions 200
-[debug] [2024-04-08T09:26:10.604Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/syntaxsoftwareinnovation:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-04-08T09:26:10.606Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T09:26:11.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T09:26:11.312Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation {"projectId":"syntaxsoftwareinnovation","projectNumber":"771305716540","displayName":"syntaxsoftwareInnovations","name":"projects/syntaxsoftwareinnovation","resources":{"hostingSite":"syntaxsoftwareinnovation"},"state":"ACTIVE","etag":"1_a51b7f6a-b33d-41e9-9fec-2f04df920b6c"}
-[info] 
-   Thank you for trying our early preview of Next.js support on Firebase Hosting.
-   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
-   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
-
-   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
-   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
-   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
-
-   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
-
-[debug] [2024-04-08T09:26:54.165Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation [none]
-[debug] [2024-04-08T09:26:55.585Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation 200
-[debug] [2024-04-08T09:26:55.586Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation {"name":"projects/syntaxsoftwareinnovation/sites/syntaxsoftwareinnovation","defaultUrl":"https://syntaxsoftwareinnovation.web.app","type":"DEFAULT_SITE"}
-[info]    ▲ Next.js 14.1.4
-
-[info] 
-
-[info]    Creating an optimized production build ...
-
-[info] (node:11232) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
 
 [info] Compiler server unexpectedly exited with code: null and signal: SIGTERM
 
-[info] Compiler edge-server unexpectedly exited with code: null and signal: SIGTERM
+[info]  ✓ Compiled successfully
 
-[info] (node:368) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
+[info]    Linting and checking validity of types ...
 
-[info] uncaughtException Error: kill EPERM
-    at ChildProcess.kill (node:internal/child_process:512:26)
-    at Timeout._onTimeout (C:\Hillary\thco\node_modules\next\dist\compiled\jest-worker\index.js:1:12931)
-    at listOnTimeout (node:internal/timers:573:17)
-    at process.processTimers (node:internal/timers:514:7) {
-  errno: -4048,
-  code: 'EPERM',
-  syscall: 'kill'
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/7) ...
+
+[info]    Generating static pages (1/7) 
+
+[info]    Generating static pages (3/7) 
+
+[info]    Generating static pages (5/7) 
+
+[info]  ✓ Generating static pages (7/7) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] > Build error occurred
+
+[info] [Error: ENOTEMPTY: directory not empty, rmdir 'C:\Hillary\ssi\ssi\out\_next\static\chunks\app'] {
+  errno: -4051,
+  code: 'ENOTEMPTY',
+  syscall: 'rmdir',
+  path: 'C:\\Hillary\\ssi\\ssi\\out\\_next\\static\\chunks\\app'
 }
 
-[debug] [2024-04-08T09:29:26.566Z] SyntaxError: Unexpected end of JSON input
+[debug] [2024-04-08T14:29:55.910Z] SyntaxError: Unexpected end of JSON input
     at JSON.parse (<anonymous>)
     at findDependency (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\utils.js:188:23)
     at getNextVersion (C:\Users\USER\AppData\Roaming\nvm\v21.7.1\node_modules\firebase-tools\lib\frameworks\next\utils.js:196:51)
