@@ -74,7 +74,7 @@ export default function Home() {
                  > */}
 
                         
-                            <Input placeholder="Enter Address" ref={placesRef} onChange={async(e)=>{
+                            <Input placeholder="Enter an Address" ref={placesRef} onChange={async(e)=>{
                               setPlace(e.target.value)
                               dispatch(updater(e.target.value))
                               
@@ -84,14 +84,8 @@ export default function Home() {
                        {/* </LoadScript> */}
                        
             
-            <Button className={styles.search} type="primary" onClick={async()=>{
-             
-             if(place != null || place != ""){
-
+            <Button disabled={place == "" ? true : false} className={styles.search} type="primary" onClick={async()=>{
               router.push('/reviews')
-              
-              
-              }
               }
             }>SEARCH</Button>
           </div>
