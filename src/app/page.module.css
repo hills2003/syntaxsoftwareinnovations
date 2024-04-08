@@ -1,6 +1,4 @@
-*{
-  z-index:10000
-}
+
 .main {
      display:flex;
      flex-direction: column;
