@@ -82,7 +82,7 @@ export default function Home() {
                             }} prefix={<SearchOutlined />} className={styles.searchInput} /> */}
 
                               
-                              <div style={{width:'50%',height:'10px'}}>
+                              <div style={{width:'50%',height:'10px'}} className={styles.searchInput}>
                               <GooglePlacesAutocomplete
                                 apiKey="AIzaSyBGBVmYYo05JfeGAjG9gWf3mCWqAOyHijg"
                                 selectProps={{
